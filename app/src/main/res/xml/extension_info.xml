@@ -7,7 +7,7 @@
     <DataType
         typeId="race-timer"
         description="Countdown timer to your race start time"
-        displayName=" "
+        displayName="RaceDay"
         graphical="true"
         icon="@mipmap/ic_launcher" />
 </ExtensionInfo>

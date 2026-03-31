@@ -11,19 +11,20 @@
         android:id="@+id/countdown_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RACE START"
-        android:textSize="12sp"
-        android:textColor="#888888"
-        android:textStyle="bold" />
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/countdown_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="--:--"
-        android:textSize="36sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:fontFamily="monospace" />
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="42sp" />
 
 </LinearLayout>

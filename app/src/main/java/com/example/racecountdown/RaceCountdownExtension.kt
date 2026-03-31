@@ -160,12 +160,17 @@ class CountdownDataType(
                         bgColor = Color.WHITE
 
                         if (karooConnected) {
-                            // Auto-start the ride by simulating bottom-right button press
-                            try {
-                                karooSystem.dispatch(PerformHardwareAction.BottomRightPress)
-                                Log.d(TAG, "Dispatched BottomRightPress - ride started!")
-                            } catch (e: Exception) {
-                                Log.e(TAG, "Start ride failed: ${e.message}")
+                            // Auto-start ride if enabled (default: ON)
+                            val autoStart = prefs.getBoolean("auto_start_ride", true)
+                            if (autoStart) {
+                                try {
+                                    karooSystem.dispatch(PerformHardwareAction.BottomRightPress)
+                                    Log.d(TAG, "Dispatched BottomRightPress - ride started!")
+                                } catch (e: Exception) {
+                                    Log.e(TAG, "Start ride failed: ${e.message}")
+                                }
+                            } else {
+                                Log.d(TAG, "Auto-start ride disabled by user")
                             }
 
                             // Fire the go beep

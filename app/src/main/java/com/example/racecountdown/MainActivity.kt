@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             text = "Set your race start time below. The countdown will " +
                     "appear as a data field on your ride screen.\n\n" +
                     "Alerts fire at 10 min, 5 min, and 1 min with " +
-                    "beep + flash. Field disappears at zero.\n\n" +
+                    "beep + flash. Field switches to clock after zero.\n\n" +
                     "Survives power cycles!"
             textSize = 14f
             setPadding(0, 0, 0, 30)
@@ -80,10 +80,8 @@ class MainActivity : AppCompatActivity() {
         }
         layout.addView(setTimeButton)
 
-        val spacer = TextView(this).apply {
-            setPadding(0, 20, 0, 0)
-        }
-        layout.addView(spacer)
+        val spacer1 = TextView(this).apply { setPadding(0, 20, 0, 0) }
+        layout.addView(spacer1)
 
         val clearButton = Button(this).apply {
             text = "Clear Race Time"
@@ -95,6 +93,24 @@ class MainActivity : AppCompatActivity() {
             }
         }
         layout.addView(clearButton)
+
+        val spacer2 = TextView(this).apply { setPadding(0, 30, 0, 0) }
+        layout.addView(spacer2)
+
+        // Auto-start ride toggle
+        val autoStartBtn = Button(this).apply {
+            val autoStart = prefs.getBoolean("auto_start_ride", true)
+            text = if (autoStart) "Auto-Start Ride: ON" else "Auto-Start Ride: OFF"
+            textSize = 16f
+            setPadding(20, 20, 20, 20)
+            setOnClickListener {
+                val current = prefs.getBoolean("auto_start_ride", true)
+                val newValue = !current
+                prefs.edit().putBoolean("auto_start_ride", newValue).apply()
+                text = if (newValue) "Auto-Start Ride: ON" else "Auto-Start Ride: OFF"
+            }
+        }
+        layout.addView(autoStartBtn)
 
         scrollView.addView(layout)
         setContentView(scrollView)
