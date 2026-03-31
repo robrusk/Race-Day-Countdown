@@ -1,6 +1,7 @@
 # Race Day Countdown - Karoo Extension
 
 A countdown timer extension for Hammerhead Karoo K2/K3 cycling computers. Set your race start time, and the data field counts down with audible alerts — then auto-starts your ride recording at zero.
+![IMG_3333](https://github.com/user-attachments/assets/c59a75cc-350a-4c68-bf9a-529b6125ee50)
 
 ## Features
 
