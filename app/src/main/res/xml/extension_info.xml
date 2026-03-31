@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionInfo
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="race-countdown"
+    displayName="Race Countdown"
+    icon="@mipmap/ic_launcher">
+    <DataType
+        typeId="race-timer"
+        description="Countdown timer to your race start time"
+        displayName=" "
+        graphical="true"
+        icon="@mipmap/ic_launcher" />
+</ExtensionInfo>
