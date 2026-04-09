@@ -3,9 +3,9 @@
 A countdown timer extension for Hammerhead Karoo K2/K3 cycling computers. Set your race start time, and the data field counts down with audible alerts — then auto-starts your ride recording at zero.
 
 ![IMG_3333](https://github.com/user-attachments/assets/c59a75cc-350a-4c68-bf9a-529b6125ee50)
+![IMG_3344](https://github.com/user-attachments/assets/c4c251ca-4aa5-4430-9f37-2ae9342bb97f)
 
-## Features
-![IMG_3344](https://github.com/user-attachments/assets/fa3f61e6-27a0-4cc2-9b8c-41750ec83a42)
+
 
 - **Countdown timer** on your ride screen — big bold monospace numbers
 - **Color-coded urgency** — white normally, yellow under 5 min, red under 1 min
