@@ -82,6 +82,8 @@ class MainActivity : AppCompatActivity() {
         val setTimeButton = Button(this).apply {
             text = "Set Race Time"
             textSize = 18f
+            setBackgroundColor(android.graphics.Color.parseColor("#FF8C00"))
+            setTextColor(android.graphics.Color.WHITE)
             setPadding(20, 20, 20, 20)
             setOnClickListener {
                 showDateTimePicker(prefs)
@@ -95,6 +97,8 @@ class MainActivity : AppCompatActivity() {
         val clearButton = Button(this).apply {
             text = "Clear Race Time"
             textSize = 16f
+            setBackgroundColor(android.graphics.Color.parseColor("#CC0000"))
+            setTextColor(android.graphics.Color.WHITE)
             setPadding(20, 20, 20, 20)
             setOnClickListener {
                 prefs.edit().putLong(CountdownDataType.KEY_RACE_TIME, 0L).apply()
@@ -111,6 +115,8 @@ class MainActivity : AppCompatActivity() {
             val autoStart = prefs.getBoolean("auto_start_ride", true)
             text = if (autoStart) "Auto-Start Ride: ON" else "Auto-Start Ride: OFF"
             textSize = 16f
+            setBackgroundColor(android.graphics.Color.parseColor("#228B22"))
+            setTextColor(android.graphics.Color.WHITE)
             setPadding(20, 20, 20, 20)
             setOnClickListener {
                 val current = prefs.getBoolean("auto_start_ride", true)
