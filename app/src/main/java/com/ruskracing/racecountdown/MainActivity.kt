@@ -1,4 +1,4 @@
-package com.example.racecountdown
+package com.ruskracing.racecountdown
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
@@ -44,11 +44,20 @@ class MainActivity : AppCompatActivity() {
         }
         layout.addView(titleText)
 
+        val taglineText = TextView(this).apply {
+            text = "\"No time is like race time\""
+            textSize = 16f
+            gravity = Gravity.CENTER
+            setTypeface(android.graphics.Typeface.DEFAULT, android.graphics.Typeface.ITALIC)
+            setPadding(0, 0, 0, 30)
+        }
+        layout.addView(taglineText)
+
         val instructionsText = TextView(this).apply {
             text = "Set your race start time below. The countdown will " +
                     "appear as a data field on your ride screen.\n\n" +
-                    "Alerts fire at 10 min, 5 min, and 1 min with " +
-                    "beep + flash. Field switches to clock after zero.\n\n" +
+                    "Alerts at 10, 5, and 1 min. Auto-starts ride at zero. " +
+                    "Switches to clock after race starts.\n\n" +
                     "Survives power cycles!"
             textSize = 14f
             setPadding(0, 0, 0, 30)

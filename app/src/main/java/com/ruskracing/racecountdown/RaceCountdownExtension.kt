@@ -1,4 +1,4 @@
-package com.example.racecountdown
+package com.ruskracing.racecountdown
 
 import android.content.Context
 import android.graphics.Color

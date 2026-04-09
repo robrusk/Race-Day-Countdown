@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.racecountdown"
+    namespace = "com.ruskracing.racecountdown"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.racecountdown"
+        applicationId = "com.ruskracing.racecountdown"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

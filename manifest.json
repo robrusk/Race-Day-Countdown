@@ -1,0 +1,13 @@
+{
+  "label": "Race Countdown",
+  "packageName": "com.ruskracing.racecountdown",
+  "latestApkUrl": "https://github.com/robrusk/Race-Day-Countdown/releases/download/v1.0/RaceDayCountdown_v1.0.apk",
+  "latestVersion": "1.0",
+  "latestVersionCode": 1,
+  "iconUrl": "https://raw.githubusercontent.com/robrusk/Race-Day-Countdown/main/assets/icon.png",
+  "developer": "Rusk Racing",
+  "description": "Countdown timer for race day with a clean, at-a-glance display optimized for Karoo devices. Beep alerts at 10, 5, and 1 minute. Auto-starts your ride at zero — hands free.",
+  "releaseNotes": "v1.0 - Initial release. Countdown timer with color-coded alerts, auto-start ride, and live clock mode.",
+  "screenshotUrls": null,
+  "tags": ["race", "countdown", "mtb", "training", "data-field"]
+}
