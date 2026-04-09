@@ -82,7 +82,10 @@ class MainActivity : AppCompatActivity() {
         val setTimeButton = Button(this).apply {
             text = "Set Race Time"
             textSize = 18f
-            setBackgroundColor(android.graphics.Color.parseColor("#FF8C00"))
+            background = android.graphics.drawable.GradientDrawable().apply {
+                setColor(android.graphics.Color.parseColor("#FF8C00"))
+                cornerRadius = 40f
+            }
             setTextColor(android.graphics.Color.WHITE)
             setPadding(20, 20, 20, 20)
             setOnClickListener {
@@ -97,7 +100,10 @@ class MainActivity : AppCompatActivity() {
         val clearButton = Button(this).apply {
             text = "Clear Race Time"
             textSize = 16f
-            setBackgroundColor(android.graphics.Color.parseColor("#CC0000"))
+            background = android.graphics.drawable.GradientDrawable().apply {
+                setColor(android.graphics.Color.parseColor("#CC0000"))
+                cornerRadius = 40f
+            }
             setTextColor(android.graphics.Color.WHITE)
             setPadding(20, 20, 20, 20)
             setOnClickListener {
@@ -115,7 +121,10 @@ class MainActivity : AppCompatActivity() {
             val autoStart = prefs.getBoolean("auto_start_ride", true)
             text = if (autoStart) "Auto-Start Ride: ON" else "Auto-Start Ride: OFF"
             textSize = 16f
-            setBackgroundColor(android.graphics.Color.parseColor("#228B22"))
+            background = android.graphics.drawable.GradientDrawable().apply {
+                setColor(android.graphics.Color.parseColor("#228B22"))
+                cornerRadius = 40f
+            }
             setTextColor(android.graphics.Color.WHITE)
             setPadding(20, 20, 20, 20)
             setOnClickListener {
